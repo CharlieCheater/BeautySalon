@@ -1,0 +1,38 @@
+﻿<Window x:Class="BeautySalon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautySalon"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Border BorderBrush="{StaticResource FocusingAttentionColor}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="TitleBar" Background="{StaticResource FocusingAttentionColor}">
+                <Label Content="Салон красоты" HorizontalAlignment="Center"
+                       FontFamily="Tahoma" FontSize="25" Foreground="White"
+                       VerticalAlignment="Center" FontWeight="UltraBlack"/>
+            </Grid>
+            <Grid x:Name="MainGrid" Grid.Row="1" Background="{StaticResource MainBackground}">
+
+            </Grid>
+            <Border Grid.Row="2" BorderBrush="{StaticResource FocusingAttentionColor}" 
+                    BorderThickness="0, 1, 0, 0" Background="{StaticResource AdditionalBackground}">
+                <Grid x:Name="Footer">
+                    <Label Content="Copyright. The Cheater Company" Foreground="{StaticResource FocusingAttentionColor}"
+                       VerticalAlignment="Center" FontFamily="Tahoma"/>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Hyperlink Name="AdminLink" Foreground="{StaticResource FocusingAttentionColor}" Click="AdminLink_Click">
+                        <TextBlock x:Name="AdminText" Text="Войти от имени администратора" />
+                    </Hyperlink>
+                    </TextBlock>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
