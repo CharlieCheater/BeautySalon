@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeautySalon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="CanResize">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="1" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
     <Border BorderBrush="{StaticResource FocusingAttentionColor}">
         <Grid>
             <Grid.RowDefinitions>
@@ -17,6 +20,16 @@
                 <Label Content="Салон красоты" HorizontalAlignment="Center"
                        FontFamily="Tahoma" FontSize="25" Foreground="White"
                        VerticalAlignment="Center" FontWeight="UltraBlack"/>
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Stretch">
+                    <Button x:Name="Hide" Padding="10, 0" Style="{StaticResource CustomDesignControlButton}" Click="Hide_Click">
+                        <Path Data="M19,13H5V11H19V13Z" Height="7" Width="25" />
+                    </Button>
+                    <Button x:Name="Close" Padding="10, 0" Style="{StaticResource CustomDesignControlButton}" Click="Close_Click">
+                        <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" Height="25" Width="25" />
+                    </Button>
+                </StackPanel>
             </Grid>
             <Grid x:Name="MainGrid" Grid.Row="1" Background="{StaticResource MainBackground}">
                 <Button Style="{StaticResource CustomDesignButton}" Content="Test" Margin="300, 120" />

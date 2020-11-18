@@ -40,7 +40,21 @@ namespace BeautySalon
 
         private void AdminLink_Click(object sender, RoutedEventArgs e)
         {
+            if (!IsAdmin)
+            {
+
+            }
             IsAdmin = !IsAdmin;
+        }
+
+        private void Hide_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
