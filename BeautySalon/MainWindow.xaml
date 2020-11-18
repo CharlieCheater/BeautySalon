@@ -19,7 +19,7 @@
                        VerticalAlignment="Center" FontWeight="UltraBlack"/>
             </Grid>
             <Grid x:Name="MainGrid" Grid.Row="1" Background="{StaticResource MainBackground}">
-
+                <Button Style="{StaticResource CustomDesignButton}" Content="Test" Margin="300, 120" />
             </Grid>
             <Border Grid.Row="2" BorderBrush="{StaticResource FocusingAttentionColor}" 
                     BorderThickness="0, 1, 0, 0" Background="{StaticResource AdditionalBackground}">

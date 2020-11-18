@@ -3,5 +3,6 @@
                     xmlns:local="clr-namespace:BeautySalon.Themes">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
+        <ResourceDictionary Source="DesignTheme.Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
