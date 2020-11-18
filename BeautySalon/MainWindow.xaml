@@ -16,7 +16,7 @@
                 <RowDefinition />
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Grid x:Name="TitleBar" Background="{StaticResource FocusingAttentionColor}">
+            <Grid x:Name="TitleBar" Background="{StaticResource FocusingAttentionColor}" MouseDown="TitleBar_MouseDown" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
                 <Label Content="Салон красоты" HorizontalAlignment="Center"
                        FontFamily="Tahoma" FontSize="25" Foreground="White"
                        VerticalAlignment="Center" FontWeight="UltraBlack"/>
