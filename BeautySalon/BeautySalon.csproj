@@ -59,6 +59,9 @@
     <Compile Include="Views\AdminAuthWindow.xaml.cs">
       <DependentUpon>AdminAuthWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ServicesView.xaml.cs">
+      <DependentUpon>ServicesView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdminAuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ServicesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
