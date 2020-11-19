@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeautySalon.Events;
+using BeautySalon.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +26,10 @@ namespace BeautySalon
         {
             InitializeComponent();
         }
+
+
+        public event EventHandler Administrated;
+
         private bool _isAdmin = false;
         public bool IsAdmin
         {
@@ -35,14 +41,20 @@ namespace BeautySalon
                     AdminText.Text = "Выйти из режима администрирования";
                 else 
                     AdminText.Text = "Войти в режим администрирования";
+                AdminModeEventArgs args = new AdminModeEventArgs
+                {
+                    IsAdmin = value
+                };
+                Administrated(this, args);
             }
         }
-
+        public AdminAuthWindow AuthWindow { get; private set; }
         private void AdminLink_Click(object sender, RoutedEventArgs e)
         {
             if (!IsAdmin)
             {
-
+                (new AdminAuthWindow()).ShowDialog();
+                return;
             }
             IsAdmin = !IsAdmin;
         }
@@ -60,7 +72,9 @@ namespace BeautySalon
         private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if(e.LeftButton == MouseButtonState.Pressed)
+            {
                 DragMove();
+            }
         }
 
         private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

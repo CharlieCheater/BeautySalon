@@ -1,0 +1,28 @@
+﻿<Window x:Class="BeautySalon.Views.AdminAuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautySalon.Views"
+        mc:Ignorable="d"
+        Title="AdminAuthWindow" Height="350" Width="300" ResizeMode="NoResize" WindowStyle="None" FontFamily="Tahoma">
+    <Border BorderBrush="Black" BorderThickness="0.35">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid x:Name="TitleBar" Background="{StaticResource FocusingAttentionColor}" MouseDown="TitleBar_MouseDown">
+                <Label Content="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="25" />
+            </Grid>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Width="150" Margin="0, 25">
+                <Label Content="Логин" HorizontalAlignment="Center" FontSize="25" />
+                <TextBox Style="{StaticResource CustomDesignTextBox}" Padding="0, 10" />
+                <Label Content="Пароль" HorizontalAlignment="Center" FontSize="25" />
+                <TextBox Style="{StaticResource CustomDesignTextBox}" Padding="0, 10" />
+                <Button x:Name="Login" Style="{StaticResource CustomDesignButton}" Content="Войти" Margin="0, 10, 0, 5" Click="Login_Click" />
+                <Button x:Name="Cancel" Style="{StaticResource CustomDesignButton}" Margin="0, 5" Content="Отмена" Click="Cancel_Click" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

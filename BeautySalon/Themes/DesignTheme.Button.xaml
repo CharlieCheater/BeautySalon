@@ -8,7 +8,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border x:Name="border" BorderBrush="{DynamicResource FocusingAttentionColor}" BorderThickness="1" Background="White" SnapsToDevicePixels="true">
+                    <Border x:Name="border" BorderBrush="{DynamicResource FocusingAttentionColor}" 
+                            BorderThickness="1" Background="White" SnapsToDevicePixels="true"
+                            Padding="20, 10">
                         <ContentPresenter x:Name="contentPresenter" Focusable="False" 
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" 
                                           RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 

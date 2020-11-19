@@ -4,5 +4,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="DesignTheme.Button.xaml" />
+        <ResourceDictionary Source="DesignTheme.TextBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
