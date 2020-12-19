@@ -17,7 +17,7 @@
             </Grid>
             <StackPanel Grid.Row="1" HorizontalAlignment="Center" Width="155" VerticalAlignment="Center">
                 <Label Content="Введите код" HorizontalAlignment="Center" FontSize="25" />
-                <TextBox Style="{StaticResource CustomDesignTextBox}" Padding="0, 10" />
+                <TextBox x:Name="PinCodeTB" Style="{StaticResource CustomDesignTextBox}" Padding="0, 10" />
                 <Button x:Name="Login" Style="{StaticResource CustomDesignButton}" Content="Войти" Margin="0, 10, 0, 5" Click="Login_Click" />
                 <Button x:Name="Cancel" Style="{StaticResource CustomDesignButton}" Margin="0, 5" Content="Отмена" Click="Cancel_Click" />
             </StackPanel>
