@@ -39,13 +39,16 @@ namespace BeautySalon
                 _isAdmin = value;
                 if (value)
                     AdminText.Text = "Выйти из режима администрирования";
-                else 
+                else
                     AdminText.Text = "Войти в режим администрирования";
                 AdminModeEventArgs args = new AdminModeEventArgs
                 {
                     IsAdmin = value
                 };
-                Administrated(this, args);
+                if (Administrated is EventHandler)
+                {
+                    Administrated(this, args);
+                }
             }
         }
         public AdminAuthWindow AuthWindow { get; private set; }
@@ -71,7 +74,7 @@ namespace BeautySalon
 
         private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
