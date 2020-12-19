@@ -36,9 +36,12 @@ namespace BeautySalon.Views
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            var t = App.Current.MainWindow as MainWindow;
-            t.IsAdmin = true;
-            this.Close();
+            if(PinCodeTB.Text == "0000")
+            {
+                var t = App.Current.MainWindow as MainWindow;
+                t.IsAdmin = true;
+                this.Close();
+            }
         }
     }
 }
